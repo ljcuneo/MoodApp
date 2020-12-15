@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="819.0" prefWidth="665.0" style="-fx-background-color: #D3D3D3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane prefHeight="103.0" prefWidth="665.0" style="-fx-background-color: #2A9D8F;">
+            <children>
+                <Label id="title-label" layoutX="101.0" layoutY="39.0" stylesheets="@css/signupscenestyle.css" text="Create Your BANKZY Account Today!" textFill="#ededed">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+            <ImageView fx:id="bankzyLogo" fitHeight="80.0" fitWidth="80.0" layoutX="8.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" rotate="-23.2">
+               <image>
+                  <Image url="@../../../images/piggy-bank.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutY="103.0" prefHeight="666.0" prefWidth="408.0">
+            <children>
+                <VBox prefHeight="680.0" prefWidth="408.0">
+                    <children>
+                        <TextField fx:id="firstNameTextField" onKeyTyped="#firstNameOnKeyTyped" prefHeight="30.0" prefWidth="300.0" promptText="first name">
+                            <font>
+                                <Font name="Lucida Console" size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="40.0" top="50.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <Label fx:id="firstNameErrorLabel" prefHeight="17.0" prefWidth="300.0" text="2 - 30 Characters Long">
+                            <font>
+                                <Font name="Lucida Console" size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="40.0" top="5.0" />
+                            </VBox.margin>
+                        </Label>
+                        <TextField fx:id="lastNameTextField" onKeyTyped="#lastNameOnKeyTyped" prefHeight="30.0" prefWidth="300.0" promptText="last name">
+                            <font>
+                                <Font name="Lucida Console" size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="40.0" top="50.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <Label fx:id="lastNameErrorLabel" prefHeight="17.0" prefWidth="300.0" text="2 - 30 Characters Long">
+                            <font>
+                                <Font name="Lucida Console" size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="40.0" top="5.0" />
+                            </VBox.margin>
+                        </Label>
+                        <TextField fx:id="emailTextField" onKeyReleased="#emailOnKeyTyped" prefHeight="30.0" prefWidth="300.0" promptText="email">
+                            <font>
+                                <Font name="Lucida Console" size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="40.0" top="50.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <Label fx:id="emailErrorLabel" prefHeight="15.0" prefWidth="300.0" text="Must Be A Valid Email Address">
+                            <font>
+                                <Font name="Lucida Console" size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="40.0" top="5.0" />
+                            </VBox.margin>
+                        </Label>
+                  <Label fx:id="emailErrorLabel2" prefHeight="15.0" prefWidth="247.0" text="Email Address Available">
+                     <font>
+                        <Font name="Lucida Console" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </Label>
+                        <TextField fx:id="usernameTextField" onKeyTyped="#usernameOnKeyTyped" prefHeight="30.0" prefWidth="300.0" promptText="username">
+                            <font>
+                                <Font name="Lucida Console" size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="40.0" top="50.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <Label fx:id="usernameErrorLabel" prefHeight="15.0" prefWidth="300.0" text="Alphanumeric And 6 - 30 Characters">
+                            <font>
+                                <Font name="Lucida Console" size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="40.0" top="5.0" />
+                            </VBox.margin>
+                        </Label>
+                  <Label fx:id="usernameErrorLabel2" layoutX="30.0" layoutY="411.0" prefHeight="15.0" prefWidth="300.0" text="Username Available">
+                     <font>
+                        <Font name="Lucida Console" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </Label>
+                        <PasswordField fx:id="passwordTextField" onKeyTyped="#passwordOnKeyTyped" prefHeight="30.0" prefWidth="300.0" promptText="password">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="40.0" top="50.0" />
+                            </VBox.margin>
+                        </PasswordField>
+                        <Label fx:id="passwordErrorLabel" prefHeight="15.0" prefWidth="300.0" text="At Least 8 Characters">
+                            <font>
+                                <Font name="Lucida Console" size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="40.0" top="5.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label fx:id="passwordErrorLabel2" layoutX="30.0" layoutY="524.0" prefHeight="15.0" prefWidth="300.0" text="Must Include One Number">
+                            <font>
+                                <Font name="Lucida Console" size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="40.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label fx:id="passwordErrorLabel3" layoutX="30.0" layoutY="539.0" prefHeight="15.0" prefWidth="365.0" text="One Lowercase Letter">
+                            <font>
+                                <Font name="Lucida Console" size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="40.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label fx:id="passwordErrorLabel4" layoutX="30.0" layoutY="554.0" prefHeight="15.0" prefWidth="300.0" text="One Uppercase Letter">
+                            <font>
+                                <Font name="Lucida Console" size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="40.0" />
+                            </VBox.margin>
+                        </Label>
+                  <Label fx:id="passwordErrorLabel5" layoutX="30.0" layoutY="569.0" prefHeight="15.0" prefWidth="300.0" text="One Special Character (@#$%^&amp;+=!) ">
+                     <font>
+                        <Font name="Lucida Console" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="40.0" />
+                     </VBox.margin>
+                  </Label>
+                        <PasswordField fx:id="confirmPasswordTextField" onKeyTyped="#confirmPasswordOnKeyTyped" prefHeight="30.0" prefWidth="300.0" promptText="confirm password">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="40.0" top="50.0" />
+                            </VBox.margin>
+                        </PasswordField>
+                        <Label fx:id="confirmPasswordErrorLabel" prefHeight="18.0" prefWidth="300.0" text="Password Match">
+                            <font>
+                                <Font name="Lucida Console" size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets left="40.0" top="5.0" />
+                            </VBox.margin>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+      <Label fx:id="registrationErrorLabel" layoutX="485.0" layoutY="269.0">
+         <font>
+            <Font name="Lucida Console" size="14.0" />
+         </font>
+      </Label>
+          <AnchorPane layoutX="456.0" layoutY="316.0" prefHeight="166.0" prefWidth="209.0">
+              <children>
+                  <Button id="register-btn" layoutX="2.0" layoutY="39.0" mnemonicParsing="false" onAction="#registerButtonOnAction" prefHeight="70.0" prefWidth="207.0" stylesheets="@css/signupscenestyle.css" text="Register">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+                  <Button id="go-back-btn" layoutX="1.0" layoutY="118.0" mnemonicParsing="false" onAction="#goBackButtonOnAction" prefHeight="70.0" prefWidth="207.0" stylesheets="@css/signupscenestyle.css" text="Go Back" />
+            <ImageView fx:id="registerIcon" fitHeight="41.0" fitWidth="37.0" layoutX="22.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/registration.png" />
+               </image>
+            </ImageView>
+              </children>
+          </AnchorPane>
+    </children>
+</AnchorPane>

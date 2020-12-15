@@ -1,0 +1,13 @@
+/* BUTTONS */
+#sign-in-btn,
+#go-back-btn {
+    -fx-background-color: #EDEDED;
+}
+
+#sign-in-btn:hover {
+    -fx-background-color: #F4A261;
+}
+
+#go-back-btn:hover {
+    -fx-background-color: #E76F51;
+}

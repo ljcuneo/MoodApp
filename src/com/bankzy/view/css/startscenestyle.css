@@ -1,0 +1,19 @@
+
+/* BUTTONS */
+#sign-in-btn,
+#sign-up-btn,
+#exit-btn {
+    -fx-background-color: #EDEDED;
+    -fx-font-size: 16px;
+    -fx-font-family: "Lucida Console";
+}
+
+#exit-btn:hover {
+    -fx-background-color: #E76F51;
+}
+
+#sign-in-btn:hover,
+#sign-up-btn:hover {
+    -fx-background-color: #F4A261;
+}
+

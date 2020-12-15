@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="348.0" prefWidth="600.0" style="-fx-background-color: #D3D3D3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="-7.0" prefHeight="106.0" prefWidth="608.0" style="-fx-background-color: #2A9D8F;">
+         <children>
+            <Label layoutX="203.0" layoutY="14.0" text="Sign In" textFill="#ededed">
+               <font>
+                  <Font name="Lucida Console" size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="164.0" layoutY="69.0" text="Take Control Of Your Money" textFill="#ededed">
+               <font>
+                  <Font name="Lucida Console" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="bankzyLogo" fitHeight="92.0" fitWidth="102.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" rotate="-23.2">
+               <image>
+                  <Image url="@../../../images/piggy-bank.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <VBox layoutY="106.0" prefHeight="238.0" prefWidth="392.0">
+         <children>
+            <HBox prefHeight="47.0" prefWidth="392.0">
+               <children>
+                  <ImageView fx:id="usernameIcon" fitHeight="42.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/username.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="15.0" top="56.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <TextField fx:id="usernameTextField" onKeyTyped="#usernameOnKeyTyped" prefHeight="30.0" prefWidth="344.0" promptText="username">
+                     <font>
+                        <Font name="Lucida Console" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="60.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="60.0" prefWidth="392.0">
+               <children>
+                  <ImageView fx:id="passwordIcon" fitHeight="35.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/password.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="15.0" top="30.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <PasswordField fx:id="passwordTextField" onKeyTyped="#passwordOnKeyTyped" prefHeight="30.0" prefWidth="350.0" promptText="password">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="7.0" top="28.0" />
+                     </HBox.margin>
+                  </PasswordField>
+               </children>
+            </HBox>
+            <Label fx:id="signInErrorMessage">
+               <font>
+                  <Font name="Lucida Console" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="40.0" top="25.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="450.0" layoutY="139.0" prefHeight="175.0" prefWidth="150.0" stylesheets="@css/signinscenestyle.css">
+         <children>
+            <Button id="sign-in-btn" mnemonicParsing="false" onAction="#signInButtonOnAction" prefHeight="70.0" prefWidth="207.0" stylesheets="@css/signinscenestyle.css" text="Sign In">
+               <font>
+                  <Font name="Lucida Console" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="padLockIcon" fitHeight="30.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/padlock.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="go-back-btn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#goBackButtonOnAction" prefHeight="70.0" prefWidth="207.0" stylesheets="@css/signinscenestyle.css" text="Go Back">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

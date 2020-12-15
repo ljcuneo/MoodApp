@@ -1,0 +1,19 @@
+#title-label {
+    -fx-font-family: "Lucida Console";
+}
+
+/* BUTTONS */
+#register-btn,
+#go-back-btn {
+    -fx-background-color: #EDEDED;
+    -fx-font-size: 16px;
+    -fx-font-family: "Lucida Console";
+}
+
+#register-btn:hover {
+    -fx-background-color: #F4A261;
+}
+
+#go-back-btn:hover {
+    -fx-background-color: #E76F51;
+}
