@@ -1,8 +1,8 @@
-package com.bankzy;
+package com.mood;
 
-import com.bankzy.model.DatabaseInteraction;
-import com.bankzy.view.ViewErrorMessages;
-import com.bankzy.view.ViewFactory;
+import com.mood.model.DatabaseInteraction;
+import com.mood.view.ViewErrorMessages;
+import com.mood.view.ViewFactory;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -24,7 +24,7 @@ public class Launcher extends Application {
      */
     @Override
     public void start(Stage primaryStage) {
-        ViewFactory viewFactory = new ViewFactory(new BankzyManager(), new DatabaseInteraction(),
+        ViewFactory viewFactory = new ViewFactory(new MoodManager(), new DatabaseInteraction(),
                 new ViewErrorMessages());
         viewFactory.showStartWindow();
     }

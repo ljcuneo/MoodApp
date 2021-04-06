@@ -1,4 +1,4 @@
-package com.bankzy.model;
+package com.mood.model;
 
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;

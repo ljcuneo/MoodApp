@@ -1,14 +1,13 @@
-package com.bankzy.view;
+package com.mood.view;
 
-import com.bankzy.BankzyManager;
-import com.bankzy.controller.*;
-import com.bankzy.model.DatabaseInteraction;
+import com.mood.MoodManager;
+import com.mood.controller.*;
+import com.mood.model.DatabaseInteraction;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -23,13 +22,13 @@ import java.io.IOException;
  */
 public class ViewFactory {
 
-    private BankzyManager bankzyManager;
+    private MoodManager moodManager;
     private DatabaseInteraction databaseInteraction;
     private ViewErrorMessages viewErrorMessages;
 
-    public ViewFactory(BankzyManager bankzyManager, DatabaseInteraction databaseInteraction,
+    public ViewFactory(MoodManager moodManager, DatabaseInteraction databaseInteraction,
                        ViewErrorMessages viewErrorMessages) {
-        this.bankzyManager = bankzyManager;
+        this.moodManager = moodManager;
         this.databaseInteraction = databaseInteraction;
         this.viewErrorMessages = viewErrorMessages;
     }
@@ -39,7 +38,7 @@ public class ViewFactory {
      */
     public void showStartWindow() {
         BaseController controller =
-                new StartSceneController(bankzyManager, this,
+                new StartSceneController(moodManager, this,
                         databaseInteraction, viewErrorMessages, "StartScene.fxml");
         initializeStage(controller);
 
@@ -50,7 +49,7 @@ public class ViewFactory {
      */
     public void showSignInWindow() {
         BaseController controller =
-                new SignInSceneController(bankzyManager, this, databaseInteraction,
+                new SignInSceneController(moodManager, this, databaseInteraction,
                         viewErrorMessages, "SignInScene.fxml");
         initializeStage(controller);
     }
@@ -60,7 +59,7 @@ public class ViewFactory {
      */
     public void showSignUpWindow() {
         BaseController controller =
-                new SignUpSceneController(bankzyManager, this, databaseInteraction, viewErrorMessages,
+                new SignUpSceneController(moodManager, this, databaseInteraction, viewErrorMessages,
                         "SignUpScene.fxml");
         initializeStage(controller);
 
@@ -71,7 +70,7 @@ public class ViewFactory {
      */
     public void showMainWindow() {
         BaseController controller =
-                new MainSceneController(bankzyManager, this, databaseInteraction, viewErrorMessages,
+                new MainSceneController(moodManager, this, databaseInteraction, viewErrorMessages,
                         "MainScene.fxml");
         initializeStage(controller);
     }
@@ -93,9 +92,7 @@ public class ViewFactory {
         }
         Scene scene = new Scene(parent);
         Stage stage = new Stage();
-        stage.setTitle("BANKZY");
-        Image icon = new Image(getClass().getResourceAsStream("/images/piggy-bank.png"));
-        stage.getIcons().add(icon);
+        stage.setTitle("MOOD");
         stage.resizableProperty().setValue(Boolean.FALSE);
         stage.setScene(scene);
         stage.show();

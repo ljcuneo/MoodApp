@@ -1,32 +1,27 @@
-package com.bankzy.controller;
+package com.mood.controller;
 
 
-import com.bankzy.BankzyManager;
-import com.bankzy.model.DatabaseInteraction;
-import com.bankzy.view.ViewErrorMessages;
+import com.mood.MoodManager;
+import com.mood.model.DatabaseInteraction;
+import com.mood.view.ViewErrorMessages;
 
-import com.bankzy.view.ViewFactory;
+import com.mood.view.ViewFactory;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 
-import java.io.File;
-import java.net.URL;
 import java.sql.SQLException;
-import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
  *
  */
-public class SignUpSceneController extends BaseController implements Initializable {
+public class SignUpSceneController extends BaseController{
     @FXML
     private TextField firstNameTextField;
 
@@ -97,21 +92,10 @@ public class SignUpSceneController extends BaseController implements Initializab
     private String regexEmail = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
     private String regexUsername = "^[A-Za-z]\\w{5,29}$";
 
-    public SignUpSceneController(BankzyManager bankzyManager, ViewFactory viewFactory,
+    public SignUpSceneController(MoodManager moodManager, ViewFactory viewFactory,
                                  DatabaseInteraction databaseInteraction, ViewErrorMessages viewErrorMessages,
                                  String fxmlName) {
-        super(bankzyManager, viewFactory, databaseInteraction, viewErrorMessages, fxmlName);
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        File file = new File("src/images/piggy-bank.png");
-        Image image = new Image((file.toURI().toString()));
-        bankzyLogo.setImage(image);
-
-        File file2 = new File("src/images/registration.png");
-        Image image2 = new Image((file2.toURI().toString()));
-        registerIcon.setImage(image2);
+        super(moodManager, viewFactory, databaseInteraction, viewErrorMessages, fxmlName);
     }
 
 

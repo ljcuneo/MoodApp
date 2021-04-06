@@ -1,4 +1,4 @@
-package com.bankzy.model;
+package com.mood.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,15 +17,14 @@ public class DatabaseConnection {
      */
     public Connection getConnection() {
         /* Connection information below */
-        String databaseName = "";
-        String databaseUser = "";
-        String databasePassword = "";
-        String url = "";
+        String databaseName = "jdbc:mysql://localhost:3306/bankzydb";
+        String databaseUser = "root";
+        String databasePassword = "sql8967442MnMn!";
 
         /* Testing if set up and correct imports have been made  and establishing connection */
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            databaseLink = DriverManager.getConnection(url + databaseName, databaseUser, databasePassword);
+            databaseLink = DriverManager.getConnection(databaseName, databaseUser, databasePassword);
         } catch (Exception e) {
             e.printStackTrace();
             e.getCause();

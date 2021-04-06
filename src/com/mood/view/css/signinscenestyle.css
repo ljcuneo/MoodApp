@@ -1,7 +1,7 @@
 /* BUTTONS */
-#sign-in-btn,
-#go-back-btn {
+#sign-in-btn {
     -fx-background-color: #EDEDED;
+    -fx-background-radius: 50px;
 }
 
 #sign-in-btn:hover {

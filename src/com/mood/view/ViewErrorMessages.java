@@ -1,4 +1,4 @@
-package com.bankzy.view;
+package com.mood.view;
 
 import javafx.scene.control.Label;
 import javafx.scene.paint.Paint;

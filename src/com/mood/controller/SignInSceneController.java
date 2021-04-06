@@ -1,10 +1,10 @@
-package com.bankzy.controller;
+package com.mood.controller;
 
 
-import com.bankzy.BankzyManager;
-import com.bankzy.model.DatabaseInteraction;
-import com.bankzy.view.ViewErrorMessages;
-import com.bankzy.view.ViewFactory;
+import com.mood.MoodManager;
+import com.mood.model.DatabaseInteraction;
+import com.mood.view.ViewErrorMessages;
+import com.mood.view.ViewFactory;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -40,17 +40,14 @@ public class SignInSceneController extends BaseController implements Initializab
     @FXML
     private ImageView padLockIcon;
 
-    public SignInSceneController(BankzyManager bankzyManager, ViewFactory viewFactory,
+    public SignInSceneController(MoodManager moodManager, ViewFactory viewFactory,
                                  DatabaseInteraction databaseInteraction, ViewErrorMessages viewErrorMessages,
                                  String fxmlName) {
-        super(bankzyManager, viewFactory, databaseInteraction, viewErrorMessages, fxmlName);
+        super(moodManager, viewFactory, databaseInteraction, viewErrorMessages, fxmlName);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        File file = new File("src/images/piggy-bank.png");
-        Image image = new Image((file.toURI().toString()));
-        bankzyLogo.setImage(image);
 
         File file2 = new File("src/images/username.png");
         Image image2 = new Image((file2.toURI().toString()));
@@ -60,9 +57,6 @@ public class SignInSceneController extends BaseController implements Initializab
         Image image3 = new Image((file3.toURI().toString()));
         passwordIcon.setImage(image3);
 
-        File file4 = new File("src/images/padlock.png");
-        Image image4 = new Image((file4.toURI().toString()));
-        padLockIcon.setImage(image4);
     }
 
 

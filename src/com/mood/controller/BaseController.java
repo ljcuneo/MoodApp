@@ -1,9 +1,9 @@
-package com.bankzy.controller;
+package com.mood.controller;
 
-import com.bankzy.BankzyManager;
-import com.bankzy.model.DatabaseInteraction;
-import com.bankzy.view.ViewErrorMessages;
-import com.bankzy.view.ViewFactory;
+import com.mood.MoodManager;
+import com.mood.model.DatabaseInteraction;
+import com.mood.view.ViewErrorMessages;
+import com.mood.view.ViewFactory;
 
 
 /**
@@ -12,16 +12,16 @@ import com.bankzy.view.ViewFactory;
  */
 public abstract class BaseController {
 
-    protected BankzyManager bankzyManager;
+    protected MoodManager moodManager;
     protected ViewFactory viewFactory;
     protected DatabaseInteraction databaseInteraction;
     protected ViewErrorMessages viewErrorMessages;
     private String fxmlName;
 
-    public BaseController(BankzyManager bankzyManager, ViewFactory viewFactory,
+    public BaseController(MoodManager moodManager, ViewFactory viewFactory,
                           DatabaseInteraction databaseInteraction, ViewErrorMessages viewErrorMessages,
                           String fxmlName) {
-        this.bankzyManager = bankzyManager;
+        this.moodManager = moodManager;
         this.viewFactory = viewFactory;
         this.databaseInteraction = databaseInteraction;
         this.viewErrorMessages = viewErrorMessages;

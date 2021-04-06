@@ -1,9 +1,9 @@
-package com.bankzy.controller;
+package com.mood.controller;
 
-import com.bankzy.BankzyManager;
-import com.bankzy.model.DatabaseInteraction;
-import com.bankzy.view.ViewErrorMessages;
-import com.bankzy.view.ViewFactory;
+import com.mood.MoodManager;
+import com.mood.model.DatabaseInteraction;
+import com.mood.view.ViewErrorMessages;
+import com.mood.view.ViewFactory;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -28,17 +28,14 @@ public class StartSceneController extends BaseController implements Initializabl
     @FXML
     private ImageView padLock2;
 
-    public StartSceneController(BankzyManager bankzyManager, ViewFactory viewFactory,
+    public StartSceneController(MoodManager moodManager, ViewFactory viewFactory,
                                 DatabaseInteraction databaseInteraction, ViewErrorMessages viewErrorMessages,
                                 String fxmlName) {
-        super(bankzyManager, viewFactory, databaseInteraction, viewErrorMessages, fxmlName);
+        super(moodManager, viewFactory, databaseInteraction, viewErrorMessages, fxmlName);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        File file = new File("src/images/piggy-bank.png");
-        Image image = new Image((file.toURI().toString()));
-        bankzyLogo.setImage(image);
 
         File file2 = new File("src/images/padlock.png");
         Image image2 = new Image((file2.toURI().toString()));
@@ -78,7 +75,7 @@ public class StartSceneController extends BaseController implements Initializabl
      * closeStage() gets the scene from a component within the start scene and closes the stage.
      */
     public void closeStage() {
-        Stage stage = (Stage) bankzyLogo.getScene().getWindow();
+        Stage stage = (Stage) padLock.getScene().getWindow();
         viewFactory.closeStage(stage);
     }
 }
